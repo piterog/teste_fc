@@ -1,7 +1,7 @@
 <?php
 class Database
 {
-    public static function initDatabase()
+    public static function Connection()
     {
         try {
             $pdo = new PDO('mysql:host=127.0.0.1;dbname=teste_fc;charset=utf8', 'root', '123123');
