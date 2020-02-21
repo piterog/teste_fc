@@ -57,12 +57,11 @@ class Medico
     
     public function update($data)
 	{
-        $now = date("Y-m-d H:i:s");
-
+		$now = date("Y-m-d H:i:s");
+		
 		try {
 			$sql = "UPDATE ".$this->table." SET email = ?,nome = ?,senha = ?,endereco_consultorio = ?,data_alteracao = ?					
 				    WHERE id = ?";
-
 			$this->pdo->prepare($sql)->execute([
 				    	$data->email, $data->nome, $data->senha, 
                         $data->endereco_consultorio, $now,
