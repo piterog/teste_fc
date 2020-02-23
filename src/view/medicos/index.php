@@ -26,8 +26,8 @@
                 </td>
             </tr>
         <?php endforeach; ?>
-        <tbody>
+        </tbody>
     </table>
 </div>
 
-<?php include_once("../partials/footer.php") ?>
+<?php require_once("view/partials/footer.php") ?>

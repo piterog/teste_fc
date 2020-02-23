@@ -57,6 +57,7 @@ class MedicosController{
         if(!$model){
             $object->senha = $this->hashPass($_POST['senha']);
             $this->model->store($object);
+            $toast = 'create';
         }else{
             $object->senha = $_POST['senha'] === ""
                 ? $model->senha
@@ -64,15 +65,16 @@ class MedicosController{
 
             $object->email = $model->email;
             $this->model->update($object);
+            $toast = 'update';
         }
         
-        header('Location: index.php');
+        header('Location: index.php?toast='.$toast);
     }
 
     public function destroy()
     {
         $this->model->delete($_GET['id']);
-        header('Location: index.php');
+        header('Location: index.php?toast=delete');
     }
 
     private function hashPass(String $pass) : String
