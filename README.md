@@ -5,5 +5,7 @@
 * Docker 19.03.6;
 
 ## Como usar
-* Foi iniciado um servidor local utilizando `php -S localhost:8888`, caso deseja alterar a porta, pode-se altera no arquivo *config.php* em *SERVER_PORT*
+* Foi inicializado um servidor local utilizando `php -S localhost:8888`
 * O arquivo de configuração do banco de dados se encontra em: src/model/config-banco-dados.php
+* O Sql para o bando de dados se encontra em db.sql
+* 

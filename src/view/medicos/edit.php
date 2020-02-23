@@ -52,7 +52,7 @@
         /*
         *   Para testar a validação do backend, altere a variabel debugBackend para true;
         */
-        let debugBackend = true;
+        let debugBackend = false;
 
         let editing = $("input[name='id']").val() == "" ? false : true;
 
@@ -105,7 +105,7 @@
                     let mnlen = minlength;
                     let mxlen = maxlength;
 
-                    if(field.length <= mnlen){ 
+                    if(field.length < mnlen){ 
                         let html = "<small>Este campo deve conter pelo menos "+mnlen+" caracteres!</small>";
                         input.next('span').html(html);
                         return false;
